@@ -87,16 +87,18 @@ if (window.localStorage.getItem("background_option") !== null) {
 		document.querySelector(".landing-page").style.backgroundImage =
 			"url('images/1.png')";
 	}
+	radndomBackEl.forEach((span) => {
+		span.classList.remove("active");
+		if (
+			span.dataset.background ===
+			window.localStorage.getItem("background_option")
+		) {
+			span.classList.add("active");
+		}
+	});
+} else {
+	document.getElementsByClassName("yes")[0].classList.add("active");
 }
-
-radndomBackEl.forEach((span) => {
-	span.classList.remove("active");
-	if (
-		span.dataset.background === window.localStorage.getItem("background_option")
-	) {
-		span.classList.add("active");
-	}
-});
 
 // Select Landing Page Element
 let landingPage = document.querySelector(".landing-page");
