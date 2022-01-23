@@ -110,6 +110,6 @@ function randomizeImage() {
 			let randNum = Math.floor(Math.random() * imagesArr.length);
 
 			landingPage.style.backgroundImage = `url("images/${imagesArr[randNum]}")`;
-		}, 1000);
+		}, 10000);
 	}
 }
